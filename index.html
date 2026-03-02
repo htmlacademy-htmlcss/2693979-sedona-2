@@ -6,33 +6,35 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-navigation-logo">
-          <img src="#" alt="Логотип Седоны">
-        </a>
-        <ul class="main-navigation-list">
-          <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Главная</a>
+    <header class="header">
+      <a class="logo">
+        <img src="#" alt="Логотип Седоны">
+      </a>
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Главная</a>
           </li>
-          <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">О Седоне</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
-          <li class="main-navigation-item">
-            <a class="main-navigation-link" href="/catalog.html">Гостиницы</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="/catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <a class="main-navigation-search" href="#">
+      </nav>
+      <div class="user-bar">
+        <a class="search-link" href="#">
           <span class="visually-hidden">Поиск</span>
         </a>
-        <a class="main-navigation-favourites" href="#">
-          <span class="main-navigation-favourites-count">12</span>
+        <a class="favourites" href="#">
+          <span class="favourites-count">12</span>
           <span class="visually-hidden">Избранное</span>
         </a>
-        <a class="btn-link" href="#">Хочу сюда!</a>
-      </nav>
+        <a class="button-link" href="#">Хочу сюда!</a>
+      </div>
     </header>
-    <main class="main-index">
+    <main>
       <section class="hero">
         <h1 class="visually-hidden">Отдых в городке Седона</h1>
         <img class="hero-img" src="#" alt="Горы рядом с городком Седона">
@@ -90,18 +92,18 @@
         <p class="hotel-search-title">Заинтересовались?</p>
         <p class="hotel-search-text">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="btn-link" href="#">Поиск гостиницы в Седоне</a>
+        <a class="button-link" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru/">
           <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required="required">
-          <button class="subscription-btn" type="submit">Подписаться</button>
+          <button class="subscription-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="footer">
       <ul class="social-list">
         <li class="social-item">
           <a class="social-link social-link-vk" href="#">Вконтакте</a>
@@ -113,8 +115,8 @@
           <a class="social-link social-link-youtube" href="#">Youtube</a>
         </li>
       </ul>
-      <a class="main-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="main-footer-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="footer-academy" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="#" alt="htmlacademy">
       </a>
     </footer>
