@@ -95,6 +95,33 @@ a {
   cursor: pointer;
 }
 
+.button-submit,
+.button-reset {
+  padding: 8px 50px;
+}
+
+.button-submit {
+  background-color: #82B3D3;
+}
+
+.button-reset {
+  background: none;
+}
+
+.button-more {
+  padding: 8px 26px;
+}
+
+.button-add {
+  padding: 8px 26px;
+  background-color: #82B3D3;
+}
+
+.button-favorites {
+  padding: 8px 26px;
+  background-color: #7DB54F;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -177,8 +204,8 @@ a {
 .search-link {
   display: block;
   padding: 24px 13px 23px;
-  width: 44px;
-  height: 65px;
+  min-width: 44px;
+  min-height: 65px;
   background: url("../images/search.svg") no-repeat center center;
 }
 
@@ -187,8 +214,8 @@ a {
   display: block;
   margin-right: 20px;
   padding: 24px 13px 23px;
-  width: 44px;
-  height: 65px;
+  min-width: 44px;
+  min-height: 65px;
   background: url("../images/heart.svg") no-repeat center center;
 }
 
@@ -198,8 +225,8 @@ a {
   right: 3px;
   display: block;
   padding-top: 5px;
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 50%;
   background-color: #7DB54F;
   font-size: 10px;
@@ -339,8 +366,8 @@ a {
 .services-item-title:before {
   display: block;
   margin: 0 auto 30px;
-  width: 74px;
-  height: 72px;
+  min-width: 74px;
+  min-height: 72px;
 }
 
 .servises-item-title-housing:before {
@@ -367,8 +394,51 @@ a {
   line-height: 36px;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs-item {
+  display: flex;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  display: block;
+  margin-top: -1px;
+  margin-left: 10px;
+  width: 8px;
+  height: 12px;
+  content: url('../images/arrow-right.svg');
+}
+
+.breadcrumbs-item:first-child::after {
+  margin-top: -5px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link-home {
+  display: block;
+  width: 13px;
+  height: 13px;
+  background: url("../images/home.svg") no-repeat;
+  background-size: cover;
+}
+
 .filter {
-  padding: 35px 70px;
+  padding: 35px 70px 70px;
   background: #6B8EB4 url(../images/filter-bg.jpg) no-repeat;
   background-size: cover;
   font-size: 18px;
@@ -377,7 +447,8 @@ a {
 }
 
 .filter-title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -388,91 +459,69 @@ a {
   justify-content: space-between;
 }
 
+.filter-search-group {
+  flex-basis: 150px;
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+  border: 0;
+}
+
+.filter-search-group-price {
+  flex-basis: 287px;
+  margin-left: auto;
+}
+
 .filter-search-title {
+  margin-bottom: 32px;
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
-.filter-search-group {
-  padding: 0;
-  border: 0;
+.filter-search-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
-.filter-search-left-block {
+.filter-search-buttons {
   display: flex;
-  justify-content: space-between;
-  width: 370px;
-}
-
-.filter-search-left-block .filter-search-group {
-  width: 150px;
-}
-
-.filter-search-right-block {
-  display: flex;
-  justify-content: space-between;
-  width: 550px;
-}
-
-.filter-search-right-block .filter-search-group {
-  width: 288px;
-}
-
-.filter-search-button-block {
-  width: 191px;
-}
-
-.filter-search-button-submit,
-.filter-search-button-reset {
-  padding: 8px 50px;
+  flex-direction: column;
   width: 190px;
-  text-align: center;
 }
 
-.filter-search-button-submit {
-  background-color: #82B3D3;
+.filter-search-buttons .button-submit {
+  margin-top: auto;
 }
 
-.filter-search-button-reset {
-  background: none;
+.filter-search-buttons .button-reset {
+  margin-top: auto;
 }
 
-.breadcrumbs-item {
-  display: inline-block;
-}
-
-.breadcrumbs-item:not(:last-child) {
-  margin-right: 5px;
-}
-
-.breadcrumbs-item:not(:last-child)::after {
-  display: inline-block;
-  margin-left: 7px;
-  width: 8px;
-  height: 12px;
-  content: url('../images/arrow-right.svg');
-}
-
-.breadcrumbs-link {
-  font-size: 16px;
+.sorting {
+  padding: 14px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  min-width: 292px;
+  font-family: "PT Sans";
+  font-size: 18px;
   line-height: 21px;
-  color: #ffffff;
+  color: #333333;
 }
 
-.breadcrumbs-link-home {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background: url("../images/home.svg") no-repeat;
-  background-size: cover;
+.display {
+  display: flex;
 }
 
 .display-button {
-  display: inline-block;
+  display: block;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
+}
+
+.display-button:not(:last-child) {
+  margin-right: 8px;
 }
 
 .display-button-tiles {
@@ -495,6 +544,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .catalog-header .section-title {
@@ -510,11 +560,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-card {
+  margin-bottom: 20px;
   padding: 20px;
-  width: 340px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  flex-basis: 340px;
 }
 
 .catalog-card-link {
@@ -528,28 +584,32 @@ a {
   line-height: 28px;
 }
 
+.catalog-card-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-card .button-more,
+.catalog-card .button-add,
+.catalog-card .button-favorites {
+  padding: 8px;
+  min-width: 140px;
+  text-align: center;
+}
+
+.catalog-card-block:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .catalog-card-text {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
 
-.catalog-button-more {
-  padding: 8px 26px;
-}
-
-.catalog-button-add {
-  padding: 8px 26px;
-  background-color: #82B3D3;
-}
-
-.catalog-button-favorites {
-  padding: 8px 26px;
-  background-color: #7DB54F;
-}
-
 .catalog-card-rating {
-  display: inline-block;
+  margin: 0;
   padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 20px;
@@ -560,6 +620,7 @@ a {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-item:not(:last-child) {
@@ -567,7 +628,7 @@ a {
 }
 
 .pagination-link {
-  display: inline-block;
+  display: block;
   padding: 12px;
   width: 60px;
   height: 60px;
@@ -654,8 +715,8 @@ a {
 
 .social-link {
   display: block;
-  width: 47px;
-  height: 40px;
+  min-width: 47px;
+  min-height: 40px;
 }
 
 .social-link-vk {
