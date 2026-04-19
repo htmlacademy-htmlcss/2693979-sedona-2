@@ -9,6 +9,77 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
+    <div class="modal-container">
+      <div class="modal">
+        <p class="modal-title">Поиск гостиницы в Седоне</p>
+        <button class="modal-close-button">
+          <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
+          </svg>
+        </button>
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form-block">
+            <label class="form-label" for="check-in-date">Дата Заезда:</label>
+            <input class="form-input" id="check-in-date" type="date" name="check-in-date" required>
+            <span class="form-input-message form-input-error">Мы не можем отправить вас в прошлое.
+            </span>
+          </div>
+          <div class="form-block">
+            <label class="form-label" for="departure-date">Дата Выезда:</label>
+            <input class="form-input" id="departure-date" type="date" name="departure-date" required>
+            <span class="form-input-message form-input-valid">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+          <div class="form-container">
+            <div class="form-block">
+              <label class="form-label" for="number-adults">Взрослые:</label>
+              <div class="form-number-block">
+                <button class="form-number-button form-number-button-minus" type="button">
+                  <svg aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                  </svg>
+                </button>
+                <input class="form-number" id="number-adults" type="number" name="number-adults" value="2">
+                <button class="form-number-button form-number-button-plus" type="button">
+                  <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="form-input-message"></span>
+            </div>
+            <div class="form-block">
+              <label class="form-label" for="number-children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+              </span>
+              <div class="form-number-block">
+              <button class="form-number-button form-number-button-minus" type="button">
+                <svg aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+              </button>
+              <input class="form-number" id="number-children" type="number" name="number-children" value="2">
+              <button class="form-number-button form-number-button-plus" type="button">
+                <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                </svg>
+              </button>
+              </div>
+              <span class="form-input-message"></span>
+            </div>
+          </div>
+          <input class="button form-search-button" type="submit" value="Найти">
+        </form>
+      </div>
+    </div>
     <div class="container">
       <header class="header">
         <a class="logo">
@@ -45,7 +116,7 @@
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества отдыха в городке Седона</h2>
-          <p class="section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="section-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="section-big-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="list-reset advantages-list">
             <li class="advantages-item advantages-item-dark">
@@ -69,7 +140,7 @@
             </li>
             <li class="advantages-item advantages-item-dark advantages-item-reverse">
               <div class="advantages-item-text-block">
-                <h3 class="item-title">Там есть<br> мост дьявола</h3>
+                <h3 class="item-title">Там есть мост дьявола</h3>
                 <p class="item-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-item-img" src="images/sedona-city-2.jpg" width="800" height="385" alt="Вид на горы и природную достопримечательность Мост дьявола">
