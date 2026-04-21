@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header"  data-test="header">
         <a class="logo" href="index.html">
           <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны">
         </a>
@@ -38,8 +38,8 @@
           <a class="button" href="#">Хочу сюда!</a>
         </div>
       </header>
-      <main>
-        <section class="filter">
+      <main data-test="main">
+        <section class="filter" data-test="filter">
           <h1 class="filter-title">Гостиницы Седоны</h1>
           <ul class="list-reset breadcrumbs">
             <li class="breadcrumbs-item">
@@ -133,7 +133,7 @@
             </div>
           </form>
         </section>
-        <section class="catalog">
+        <section class="catalog" data-test="catalog">
           <div class="catalog-header">
             <h2 class="section-title">Найдено гостиниц: 38</h2>
             <select class="sorting" aria-label="Сортировка">
@@ -256,7 +256,7 @@
             </li>
           </ul>
         </section>
-        <section class="subscription subscription-inner">
+        <section class="subscription subscription-inner" data-test="subscribe">
           <h2 class="section-title">Подпишитесь на рассылку</h2>
           <p class="section-big-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -265,7 +265,7 @@
           </form>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" data-test="footer">
         <ul class="list-reset social-list">
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
